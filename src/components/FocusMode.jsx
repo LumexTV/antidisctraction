@@ -1,8 +1,15 @@
+import { useEffect } from 'react'
+
 const FocusMode = () => {
     const closeTab = () => {
         window.close()
         window.location.href = "about:blank"
     }
+
+    useEffect(() => {
+        // Attempt to close automatically
+        closeTab()
+    }, [])
 
     return (
         <div className="flex flex-col items-center justify-center h-screen w-full bg-black text-white p-8 animate-fade-in relative">
